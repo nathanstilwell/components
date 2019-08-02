@@ -1,0 +1,20 @@
+{
+  "name": "nathanstilwell-components",
+  "version": "0.1.0",
+  "description": "some components for _nathan stilwell_ stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Nathan Stilwell",
+    "email": "nathanstilwell@gmail.com",
+    "url": "https://nathanstilwell.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.8.6",
+    "styled-components": "^4.3.2"
+  }
+}
