@@ -2,9 +2,14 @@
   "name": "@nathanstilwell/components",
   "version": "0.1.0",
   "description": "some components for _nathan stilwell_ stuff",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel ./src --out-dir ./lib --ignore **/__tests__/** --copy-files",
+    "clean": "rimraf ./lib",
+    "prepublish": "npm run clean && npm run build",
+    "resolve": "npx npm-force-resolutions",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "chokidar 'src/**/*.{js,jsx}' --initial --command 'npm run build'"
   },
   "keywords": [],
   "repository": {
@@ -17,8 +22,28 @@
     "url": "https://nathanstilwell.com"
   },
   "license": "ISC",
+  "resolutions": {
+    "braces": ">=2.3.1"
+  },
   "dependencies": {
+    "lodash": "4.17.15",
     "react": "^16.8.6",
+    "react-dom": "16.9.0",
     "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
+    "babel-plugin-styled-components": "1.10.6",
+    "babel-plugin-transform-remove-strict-mode": "0.0.2",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-react": "6.24.1",
+    "chokidar-cli": "2.0.0",
+    "eslint": "6.2.2",
+    "eslint-plugin-react": "7.14.3",
+    "rimraf": "3.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
   }
 }
