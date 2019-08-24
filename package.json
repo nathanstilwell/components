@@ -1,6 +1,6 @@
 {
   "name": "@nathanstilwell/components",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "some components for _nathan stilwell_ stuff",
   "main": "lib/index.js",
   "scripts": {
