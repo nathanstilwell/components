@@ -18,9 +18,9 @@ const DescriptionParagraph = styled.p`
   }
 `;
 
-const Description = ({ children }) => (
+const Description = ({ children, theme }) => (
   <DescriptionParagraph>
-    <FillSpan>{children}</FillSpan>
+    <FillSpan theme={theme}>{children}</FillSpan>
   </DescriptionParagraph>
 );
 
