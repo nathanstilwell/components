@@ -20,6 +20,8 @@ const ListItem = styled.li`
   padding: 0.5rem 0;
 `;
 const Img = styled.img`
+  height: 1.5rem;
+  width: 1.5rem;
   margin: 0 0.5rem 0 0;
   vertical-align: middle;
 `;
@@ -34,7 +36,7 @@ const ListSection = ({ title, links }) => (
         <ListItem key={index}>
           {link.logo && (
             <Img
-              src={`https://icon.now.sh/${link.logo}/24`}
+              src={`https://assets.nathanstilwell.com/logos/${link.logo}.svg`}
               alt={`${link.logo} icon`}
             />
           )}
@@ -49,7 +51,7 @@ const ListSection = ({ title, links }) => (
 
 ListSection.defaultProps = {
   title: "",
-  links: []
+  links: [],
 };
 
 export default ListSection;
